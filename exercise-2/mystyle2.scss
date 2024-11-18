@@ -1,0 +1,56 @@
+$primary-font: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+$secondary-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-seri;
+
+body {
+  padding: 20px;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.box {
+  height: 70px;
+  padding: 5px;
+  width: 100px;
+  display: flex;
+  font-family: $primary-font;
+  border: 1px solid black;
+  border-radius: 5px;
+
+  &.base {
+    background-color: blue;
+  }
+
+  &.important {
+    background-color: darkblue;
+  }
+
+  &.warning {
+    background-color: lightblue;
+  }
+
+  &.shadow {
+    display: flex;
+    align-items: center;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.872);
+  }
+  .box-text {
+    padding: 10px;
+  }
+}
+
+
+.principal-font {
+  font-family: $primary-font;
+  font-size: large;
+}
+
+.secondary-font {
+  font-family: $secondary-font;
+  font-size: medium;
+  font-style: italic;
+}

@@ -14,3 +14,12 @@ Consist on a palette of basic colors and its gradientes in brighter and darker c
 
 ## Exercise 2
 
+Consist of an example of two different themes applied  to the same html. 
+
+To test it, please replace line 7 of the html file with each of the following lines:
+
+`<link type="text/css" rel="stylesheet" href="mystyle1.scss" />`
+`<link type="text/css" rel="stylesheet" href="mystyle2.scss" />`
+
+## Exercise 3
+
