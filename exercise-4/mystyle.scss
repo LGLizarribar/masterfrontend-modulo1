@@ -23,7 +23,7 @@ body {
   grid-template-rows: 50px 200px 30px 50px;
   grid-template-areas: 
    "title . ."
-   "texto texto texto"
+   "card-text card-text card-text"
    ". footnote footnote"
    "button button button" 
   ;
@@ -42,7 +42,7 @@ body {
 }
 
 .text {
-  grid-area: texto;
+  grid-area: card-text;
   align-self: center;
 }
 
