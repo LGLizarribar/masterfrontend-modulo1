@@ -1,0 +1,66 @@
+body {
+  margin: 0;
+  padding: 10px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 260px;
+  grid-template-rows: 150px 350px;
+  border: 1px solid gray;
+  width: fit-content;
+  grid-template-areas: 
+  "card-image"
+  "card-container"
+  ;
+}
+
+.card-container {
+  padding: 10px;
+  display: grid;
+  grid-area: card-container;
+  grid-template-columns: repeat(3, 80px);
+  grid-template-rows: 50px 200px 30px 50px;
+  grid-template-areas: 
+   "title . ."
+   "texto texto texto"
+   ". footnote footnote"
+   "button button button" 
+  ;
+}
+
+.image {
+  max-width: 260px;
+  grid-area: card-image;
+}
+
+.title {
+  grid-area: title;
+  margin: 0;
+  padding-top: 20px;
+  font-weight: 300;
+}
+
+.text {
+  grid-area: texto;
+  align-self: center;
+}
+
+.footnote {
+  grid-area: footnote;
+  font-size: small;
+  justify-self: end;
+
+}
+
+.footnote > span {
+  color: rgb(122, 177, 38);
+}
+.button {
+  grid-area: button;
+  background-color: rgb(122, 177, 38);
+  border: 0;
+  color: white;
+  cursor: pointer;
+  font-size: large;
+}

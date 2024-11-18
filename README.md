@@ -23,3 +23,8 @@ To test it, please replace line 7 of the html file with each of the following li
 
 ## Exercise 3
 
+Consist of a navbar design developed with flexbox that changes it's disposition when the display device's width is lesser than 640px.
+
+## Exercise 4
+
+Consist of a card component developed with CSS Grid to align it's items.
