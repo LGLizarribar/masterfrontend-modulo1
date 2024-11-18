@@ -1,0 +1,127 @@
+@use 'sass:color';
+@use "variables" as *;
+
+body {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.container-1 {
+  display: flex;
+  gap: 5px;
+
+  .darken-4 {
+    background-color: color.adjust($primary-color, $lightness: -40%);
+  }
+  .darken-3 {
+    background-color: color.adjust($primary-color, $lightness: -30%);
+  }
+  .darken-2 {
+    background-color: color.adjust($primary-color, $lightness: -20%);
+  }
+  .darken-1 {
+    background-color: color.adjust($primary-color, $lightness: -10%);
+  }
+  .base-color {
+    background-color: $primary-color;
+  }
+  .lighten-1 {
+    background-color: color.adjust($primary-color, $lightness: 10%);
+  }
+  .lighten-2 {
+    background-color: color.adjust($primary-color, $lightness: 20%);
+  }
+  .lighten-3 {
+    background-color: color.adjust($primary-color, $lightness: 30%);
+  }
+  .lighten-4 {
+    background-color: color.adjust($primary-color, $lightness: 40%);
+  }
+}
+
+.container-2 {
+  display: flex;
+  gap: 5px;
+
+  .darken-4 {
+    background-color: color.adjust($secondary-color, $lightness: -40%);
+  }
+  .darken-3 {
+    background-color: color.adjust($secondary-color, $lightness: -30%);
+  }
+  .darken-2 {
+    background-color: color.adjust($secondary-color, $lightness: -20%);
+  }
+  .darken-1 {
+    background-color: color.adjust($secondary-color, $lightness: -10%);
+  }
+  .base-color {
+    background-color: $secondary-color;
+  }
+  .lighten-1 {
+    background-color: color.adjust($secondary-color, $lightness: 10%);
+  }
+  .lighten-2 {
+    background-color: color.adjust($secondary-color, $lightness: 20%);
+  }
+  .lighten-3 {
+    background-color: color.adjust($secondary-color, $lightness: 30%);
+  }
+  .lighten-4 {
+    background-color: color.adjust($secondary-color, $lightness: 40%);
+  }
+}
+
+.container-3 {
+  display: flex;
+  gap: 5px;
+
+  .darken-4 {
+    background-color: color.adjust($tertiary-color, $lightness: -40%);
+  }
+  .darken-3 {
+    background-color: color.adjust($tertiary-color, $lightness: -30%);
+  }
+  .darken-2 {
+    background-color: color.adjust($tertiary-color, $lightness: -20%);
+  }
+  .darken-1 {
+    background-color: color.adjust($tertiary-color, $lightness: -10%);
+  }
+  .base-color {
+    background-color: $tertiary-color;
+  }
+  .lighten-1 {
+    background-color: color.adjust($tertiary-color, $lightness: 10%);
+  }
+  .lighten-2 {
+    background-color: color.adjust($tertiary-color, $lightness: 20%);
+  }
+  .lighten-3 {
+    background-color: color.adjust($tertiary-color, $lightness: 30%);
+  }
+  .lighten-4 {
+    background-color: color.adjust($tertiary-color, $lightness: 40%);
+  }
+}
+
+.box {
+  height: 50px;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+
+.color-box-text {
+  color: $textcolor;
+
+  &.center {
+    color: white;
+  }
+}
