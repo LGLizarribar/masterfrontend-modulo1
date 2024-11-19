@@ -1,5 +1,29 @@
-@use 'sass:color';
+@use "sass:color";
 @use "variables" as *;
+
+@function getLightness($type, $item) {
+  @if $type == "darken" {
+    @if $item == 1 {
+      @return -10%;
+    } @else if $item == 2 {
+      @return -20%;
+    } @else if $item == 3 {
+      @return -30%;
+    } @else if $item == 4 {
+      @return -40%;
+    }
+  } @else if $type == "lighten" {
+    @if $item == 1 {
+      @return 10%;
+    } @else if $item == 2 {
+      @return 20%;
+    } @else if $item == 3 {
+      @return 30%;
+    } @else if $item == 4 {
+      @return 40%;
+    }
+  }
+}
 
 body {
   padding: 0;
@@ -13,32 +37,23 @@ body {
   display: flex;
   gap: 5px;
 
-  .darken-4 {
-    background-color: color.adjust($primary-color, $lightness: -40%);
-  }
-  .darken-3 {
-    background-color: color.adjust($primary-color, $lightness: -30%);
-  }
-  .darken-2 {
-    background-color: color.adjust($primary-color, $lightness: -20%);
-  }
-  .darken-1 {
-    background-color: color.adjust($primary-color, $lightness: -10%);
-  }
   .base-color {
     background-color: $primary-color;
   }
-  .lighten-1 {
-    background-color: color.adjust($primary-color, $lightness: 10%);
-  }
-  .lighten-2 {
-    background-color: color.adjust($primary-color, $lightness: 20%);
-  }
-  .lighten-3 {
-    background-color: color.adjust($primary-color, $lightness: 30%);
-  }
-  .lighten-4 {
-    background-color: color.adjust($primary-color, $lightness: 40%);
+
+  @for $i from 1 through 4 {
+    .darken-#{$i} {
+      background-color: color.adjust(
+        $primary-color,
+        $lightness: getLightness("darken", $i)
+      );
+    }
+    .lighten-#{$i} {
+      background-color: color.adjust(
+        $primary-color,
+        $lightness: getLightness("lighten", $i)
+      );
+    }
   }
 }
 
@@ -46,32 +61,23 @@ body {
   display: flex;
   gap: 5px;
 
-  .darken-4 {
-    background-color: color.adjust($secondary-color, $lightness: -40%);
-  }
-  .darken-3 {
-    background-color: color.adjust($secondary-color, $lightness: -30%);
-  }
-  .darken-2 {
-    background-color: color.adjust($secondary-color, $lightness: -20%);
-  }
-  .darken-1 {
-    background-color: color.adjust($secondary-color, $lightness: -10%);
-  }
   .base-color {
     background-color: $secondary-color;
   }
-  .lighten-1 {
-    background-color: color.adjust($secondary-color, $lightness: 10%);
-  }
-  .lighten-2 {
-    background-color: color.adjust($secondary-color, $lightness: 20%);
-  }
-  .lighten-3 {
-    background-color: color.adjust($secondary-color, $lightness: 30%);
-  }
-  .lighten-4 {
-    background-color: color.adjust($secondary-color, $lightness: 40%);
+
+  @for $i from 1 through 4 {
+    .darken-#{$i} {
+      background-color: color.adjust(
+        $secondary-color,
+        $lightness: getLightness("darken", $i)
+      );
+    }
+    .lighten-#{$i} {
+      background-color: color.adjust(
+        $secondary-color,
+        $lightness: getLightness("lighten", $i)
+      );
+    }
   }
 }
 
@@ -79,32 +85,23 @@ body {
   display: flex;
   gap: 5px;
 
-  .darken-4 {
-    background-color: color.adjust($tertiary-color, $lightness: -40%);
-  }
-  .darken-3 {
-    background-color: color.adjust($tertiary-color, $lightness: -30%);
-  }
-  .darken-2 {
-    background-color: color.adjust($tertiary-color, $lightness: -20%);
-  }
-  .darken-1 {
-    background-color: color.adjust($tertiary-color, $lightness: -10%);
-  }
   .base-color {
     background-color: $tertiary-color;
   }
-  .lighten-1 {
-    background-color: color.adjust($tertiary-color, $lightness: 10%);
-  }
-  .lighten-2 {
-    background-color: color.adjust($tertiary-color, $lightness: 20%);
-  }
-  .lighten-3 {
-    background-color: color.adjust($tertiary-color, $lightness: 30%);
-  }
-  .lighten-4 {
-    background-color: color.adjust($tertiary-color, $lightness: 40%);
+
+  @for $i from 1 through 4 {
+    .darken-#{$i} {
+      background-color: color.adjust(
+        $tertiary-color,
+        $lightness: getLightness("darken", $i)
+      );
+    }
+    .lighten-#{$i} {
+      background-color: color.adjust(
+        $tertiary-color,
+        $lightness: getLightness("lighten", $i)
+      );
+    }
   }
 }
 
@@ -115,7 +112,6 @@ body {
   flex-direction: column;
   justify-content: center;
 }
-
 
 .color-box-text {
   color: $textcolor;
